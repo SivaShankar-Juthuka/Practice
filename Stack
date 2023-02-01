@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    stack<int>s;            // Syntax of the Stack 
+                            // Here s is nothing but a variable which represents the stack
+    while(n){
+        int k;
+        cin>>k;
+        s.push(k);          // s.push takes th I/P and store it in the top of the stack
+        n-=1;
+    }
+    int j;
+    cin>>j;
+    while(j){
+        s.pop();            //removing elements upto given position.
+        j-=1;
+    }
+
+    // s.empty finds whether the stack is empty or not 
+
+    cout<<"Printing weather the stack is empty or not ! "<<s.empty();
+
+    cout<<"\n\nPrinting stack elements\n";
+
+
+    while(!s.empty()){
+        cout<<s.top()<<" ";         //s.top gives the top most element of the stack
+        s.pop();                    //s.pop removes the topmost element of the stack
+    }
+
+    return 0;
+}

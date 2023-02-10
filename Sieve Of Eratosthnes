@@ -1,0 +1,32 @@
+//SEIVE OF ERATOSTHNES
+#include<bits/stdc++.h>
+using namespace std;
+void seive_of_eratosthnes(int n){
+	vector<bool>primes(n,true);
+	primes[0]=primes[1]=false;		 				//step 1 make 0 and 1 as false.
+	for(int i=2;i<=n;i++){						    //step 2 then start with 2.
+		if(primes[i]==true){						//step 3 now check if remaining are true or not. 
+			for(int j=i*i;j<=n;j+=i){				//step 4 if true then run loop uptil n by incrementing j with i.
+				primes[j]=false;					//step 5 then make multiples of i as false.
+			}										
+		}
+	}
+	int cnt=0;
+	for(int i=2;i<=n;i++){
+		if(primes[i]==true){
+			cnt+=1;
+			cout<<i<<" ";
+		}
+	}
+	cout<<"\n"<<cnt<<"\n";
+}
+int main(){
+	int t;
+	cin>>t;
+	while(t--){
+		int n;
+		cin>>n;
+		seive_of_eratosthnes(n);
+    }
+	return 0;
+}

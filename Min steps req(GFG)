@@ -1,0 +1,17 @@
+'''
+Given a string str consisting of only two characters 'a' and 'b'. You need to find the minimum steps required to make the string empty by removing consecutive a's and b's.
+
+'''
+int minSteps(string s) {
+    // Write your code here.
+    // User function Template for C++
+    int a = 0, b = 0;
+    char ch, prev = ' ';
+    for(int i = 0; i < s.length(); i++) {
+        ch = s[i];
+        if(prev == ch) continue;
+        ch == 'a' ? a += 1 : b += 1;
+        prev = ch;
+    }
+    return min(a, b) + 1;
+}

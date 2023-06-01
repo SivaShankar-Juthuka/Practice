@@ -1,32 +1,49 @@
 # Check perfect square
 ## Easy
-<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a positive integer n, check if it is perfect square or not.</span><br>
-<span style="font-size:18px"><strong>NOTE: </strong>Try to solve the question using only addition and subtraction operation.</span><br>
-<br>
-<span style="font-size:18px"><strong>Example 1:</strong></span></p>
+<div class="problems_problem_content__Xm_eO"><p><span style="font-size:18px">Given a positive integer N, check if it is a perfect square or not.<br>
+Note: Try to solve the question using only addition and subtraction operation.</span></p>
 
-<pre><span style="font-size:18px"><strong>Input</strong>: n = 35
-<strong>Output:</strong>&nbsp;0&nbsp;
-<strong>Explanation</strong>: 35 is not perfect
-square because sqrt(35) = 5 but
-5*5 !=35.</span>
-</pre>
+<p>&nbsp;</p>
 
-<p><span style="font-size:18px"><strong>Example 2:</strong></span></p>
+<p><strong><span style="font-size:18px">Example 1:</span></strong></p>
 
-<pre><span style="font-size:18px"><strong>Input: </strong>n = 49
-<strong>Output:&nbsp;</strong>1
-<strong>Explanation</strong>: sqrt(49) = 7 and 
-7*7 = 49, Hence 49 is perfect square. </span>
-</pre>
+<pre><strong><span style="font-size:18px">Input:</span></strong>
+<span style="font-size:18px">N = 35</span>
+<span style="font-size:18px"><strong>Output:</strong></span>
+<span style="font-size:18px">0</span>
+<strong><span style="font-size:18px">Explanation:</span></strong>
+<span style="font-size:18px">35 is not a perfect </span>
+<span style="font-size:18px">square.</span></pre>
 
-<p><br>
-<span style="font-size:18px"><strong>Your Task:&nbsp;&nbsp;</strong><br>
-You dont need to read input or print anything. Complete the function <strong>isPerfectSquare()&nbsp;</strong>which takes n&nbsp;as input parameter and returns&nbsp;1 if n is a perfect square else return&nbsp;0.</span><br>
-<br>
-<span style="font-size:18px"><strong>Expected Time Complexity:</strong> O(sqrt(n))<br>
-<strong>Expected Auxiliary Space:</strong> O(1)<br>
-<br>
-<strong>Constraints:</strong><br>
-1&lt;= n&nbsp;&lt;=10<sup>5</sup></span></p>
+<p>&nbsp;</p>
+
+<p><strong><span style="font-size:18px">Example 2:</span></strong></p>
+
+<pre><strong><span style="font-size:18px">Input:</span></strong>
+<span style="font-size:18px">N = 49</span>
+<strong><span style="font-size:18px">Output:</span></strong>
+<span style="font-size:18px">1</span>
+<strong><span style="font-size:18px">Explanation:</span></strong>
+<span style="font-size:18px">49 is a perfect</span>
+<span style="font-size:18px">square.</span></pre>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><strong><span style="font-size:18px">Your Task:</span></strong></p>
+
+<p><span style="font-size:18px">You don't need to read input or print anything. Your task is to complete the function checkPerfectSquare() which takes an integer N&nbsp;and returns 1 if it is a perfect square, else 0.</span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:18px"><strong>Expected Time Complexity:</strong> O(N)<br>
+<strong>Expected Auxiliary Space:</strong> O(1)</span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:18px"><strong>Constraints:</strong><br>
+1&lt;= N &lt;=10<sup>5</sup></span></p>
+
+<p>&nbsp;</p>
 </div>

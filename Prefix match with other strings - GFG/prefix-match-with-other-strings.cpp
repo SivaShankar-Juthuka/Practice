@@ -11,15 +11,8 @@ class Solution{
 public:
     int klengthpref(string arr[], int n, int k, string str){    
         int res = 0;
-        for(int i = 0; i< n; i++){
-            int cnt = 0;
-            string s = arr[i];
-            for(int j =0 ; j<k; j++){
-                if(s[j] == str[j]){
-                    cnt ++;
-                }
-            }
-            if(cnt == k){
+        for(int i = 0; i<n; i++){
+            if(arr[i].size() >= k and str.substr(0,k) == arr[i].substr(0,k)){
                 res += 1;
             }
         }

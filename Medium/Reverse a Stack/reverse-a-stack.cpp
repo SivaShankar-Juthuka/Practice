@@ -11,15 +11,12 @@ using namespace std;
 class Solution{
 public:
     void Reverse(stack<int> &St){
-        queue<int> q1;
+     
         while(!St.empty()){
-            q1.push(St.top());
+            cout<<St.top()<<" ";
             St.pop();
         }
-        while(!q1.empty()){
-            St.push(q1.front());
-            q1.pop();
-        }
+       
     }
 };
 

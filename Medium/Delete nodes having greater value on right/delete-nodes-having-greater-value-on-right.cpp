@@ -45,10 +45,9 @@ struct Node
 */
 class Solution
 {
-    public:
+public:
     Node *reverse(Node *head){
-        Node *prev =NULL, *Next = NULL;
-        Node *cur = head;
+        Node *cur = head, *prev=  NULL, *Next = NULL;
         while(cur != NULL){
             Next = cur->next;
             cur->next = prev;
@@ -61,21 +60,22 @@ class Solution
     Node *compute(Node *head)
     {
         // your code goes here
-        Node *rev = reverse(head);
-        Node *prev = rev, *tmp = rev->next;
+        Node *res = new Node(-1);
+        Node *tail = res;
+        head = reverse(head);
+        Node *tmp = head;
+        int x = res->data;
         while(tmp){
-            if(prev->data > tmp->data){
-                prev->next = tmp->next;
-                tmp = tmp->next;
+            if(tmp->data >= x){
+                tail->next = new Node(tmp->data);
+                tail = tail->next;
+                x = tmp->data;
             }
-            else{
-                prev = prev->next;
-                tmp = tmp->next;
-            }
+            tmp = tmp->next;
         }
-        return reverse(rev);
+        res = reverse(res->next);
+        return res;
     }
-    
 };
    
 

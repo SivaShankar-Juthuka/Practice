@@ -8,10 +8,9 @@ class Solution:
                 l.append(i)
             else:
                 c.append(i)
-        if len(c) == 0:
-            l = sorted(l)
-            return ''.join(l)
         l = sorted(l)
+        if len(c) == 0:
+            return ''.join(l)
         j = 0
         res = ""
         for i in s:

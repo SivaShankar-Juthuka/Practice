@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> findDiagonalOrder(vector<vector<int>>& nums) {
-        vector<std::vector<int>> res;
+        vector<vector<int>> res;
         int m = nums.size(), size = 0;
         for(int i = 0; i < m; i++) {
             int n = nums[i].size(), x = i;

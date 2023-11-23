@@ -1,26 +1,26 @@
 class Solution {
 public:
     vector<int> findDiagonalOrder(vector<vector<int>>& nums) {
-        vector<vector<int>> res;
-        int m = nums.size(), size = 0;
-        for(int i = 0; i < m; i++) {
-            int n = nums[i].size(), x = i;
-            for(int j = 0; j < n; j++) {
-                if(res.size() == x) {
-                    res.push_back(std::vector<int>());
-                }
-                res[x].push_back(nums[i][j]);
-                x++; size++;
+        int r = nums.size(), c = -1;
+        for(int i = 0; i<r; i++){
+            c =  (c < nums[i].size()) ? nums[i].size():c;
+        }
+        map<int, vector<int>>mp;
+        for(int i = 0; i<r+c+1; i++){
+            mp[i] = {};
+        }
+        for(int i = 0; i< r; i++){
+            int k = nums[i].size();
+            for(int j = 0; j < k; j++){
+                mp[i+j].push_back(nums[i][j]);
             }
         }
-        vector<int> ans(size);
-        int idx = 0;
-        for(int i = 0; i < res.size(); i++) {
-            for(int j = res[i].size()-1; j >= 0; j--) {
-                ans[idx] = res[i][j];
-                idx++;
+        vector<int> res;
+        for(auto it: mp){
+            for(int i =it.second.size()-1; i >= 0;  i--){
+                res.emplace_back(it.second[i]);
             }
         }
-        return ans;
+        return res;
     }
 };

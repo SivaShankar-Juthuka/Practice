@@ -9,25 +9,20 @@ using namespace std;
 
 class Solution{
 public:
-    vector<int> pattern(int N){
-        // code here
-        int t = N;
-        vector<int>v;
-        while(true){
-            if(t <= 0){
-                break;
-            }
-            if(t > 0){
-                v.emplace_back(t);
-                t -= 5;
-            }
+    void patternRecursion(int N, vector<int>& v, int t) {
+        v.push_back(t);
+        if (t <= 0) {
+            return;
         }
-        //v.emplace_back(t)
-        while(t != N){
-            v.emplace_back(t);
-            t += 5;
+        patternRecursion(N, v, t - 5);
+        if (t <= N) {
+            v.push_back(t);
         }
-        v.emplace_back(N);
+    }
+
+    vector<int> pattern(int N) {
+        vector<int> v;
+        patternRecursion(N, v, N);
         return v;
     }
 };

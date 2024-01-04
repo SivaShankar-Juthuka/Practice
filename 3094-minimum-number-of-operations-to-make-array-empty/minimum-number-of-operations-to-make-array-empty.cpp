@@ -21,9 +21,9 @@ public:
             else if(it.second%3 == 2){
                 cnt += (it.second-2)/3 + 1;
             }
-            else if(it.second % 2 == 0){
-                cnt += it.second / 2;
-            }
+            // else if(it.second % 2 == 0){
+            //     cnt += it.second / 2;
+            // }
         }
         return flag == 1? -1: cnt;
     }

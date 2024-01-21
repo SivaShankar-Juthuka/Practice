@@ -5,8 +5,8 @@ public:
         if(dp[i] != -1) return dp[i];
         int a = nums[i] + solve(i+2, nums, dp, n);
         int b = solve(i+1, nums, dp, n);
-        dp[i] = max(a, b);
-        return dp[i];
+        
+        return dp[i] = max(a, b);
     }
     int rob(vector<int>& nums) {
         int n =  nums.size();

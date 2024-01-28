@@ -6,7 +6,7 @@ using namespace std;
 // } Driver Code Ends
 //User function Template for C++
 class Solution{   
-public:
+  public:
     int n = 10000;
     void seive(vector<int>&primes){
         primes[0] = 0;
@@ -19,7 +19,7 @@ public:
             }
         }
     }
-    int solve(int Num1,int Num2){   
+    int shortestPath(int Num1,int Num2){   
         //code here
         if(Num1 == Num2) return 0;
         vector<int>primes(n, 1);
@@ -47,6 +47,7 @@ public:
                         q.push({word, steps + 1});
                     }
                 }
+                
                 word[i] = ch;
             }
         }
@@ -58,15 +59,15 @@ public:
 //{ Driver Code Starts.
 signed main()
 {
-  int t;
-  cin>>t;
-  while(t--)
-  {
-      int Num1,Num2;
-      cin>>Num1>>Num2;
-      Solution obj;
-      int answer=obj.solve(Num1,Num2);
-      cout<<answer<<endl;
-  }
+    int t;
+    cin>>t;
+    Solution obj;
+    while(t--)
+    {
+        int Num1,Num2;
+        cin>>Num1>>Num2;
+        int answer=obj.shortestPath(Num1,Num2);
+        cout<<answer<<endl;
+    }
 }
 // } Driver Code Ends

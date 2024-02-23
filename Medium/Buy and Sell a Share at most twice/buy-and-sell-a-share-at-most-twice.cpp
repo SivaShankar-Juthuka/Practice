@@ -1,0 +1,45 @@
+//{ Driver Code Starts
+//Initial Template for C++
+#include<bits/stdc++.h>
+using namespace std;
+
+
+// } Driver Code Ends
+
+class Solution
+{
+    public:
+        //User function Template for C++
+        
+        int maxProfit(vector<int>&price){
+            //Write your code here..
+            int b1 = INT_MIN, s1 = INT_MIN, b2 = INT_MIN, s2 = INT_MIN, n = price.size();
+            for (int i = 0; i < n; ++i) {
+                b1 = max(b1, -price[i]);
+                s1 = max(s1, price[i] + b1);
+                b2 = max(b2, s1 - price[i]);
+                s2 = max(s2, price[i] + b2);
+            }
+            return s2;
+        }
+
+};
+
+//{ Driver Code Starts.
+
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        
+        int n;
+        cin>>n;
+        vector<int> price(n);
+        for(int i=0;i<n;i++) cin>>price[i];
+        Solution obj;
+        cout<<obj.maxProfit(price)<<endl;
+    }
+
+}
+
+// } Driver Code Ends

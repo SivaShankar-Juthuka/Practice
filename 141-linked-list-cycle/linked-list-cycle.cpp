@@ -9,12 +9,9 @@
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
-        ListNode *t=head, *r=head;
-        //bool flag = 0;
+        ListNode *t = head, *r = head;
         if(head == NULL or head->next == NULL or head->next->next == NULL) return 0;
-        
-        while(true){
-            // if(t == r) return 1            
+        while(true){         
             if(r == NULL or r->next == NULL) return 0;
             r = r->next;
             t = t->next;

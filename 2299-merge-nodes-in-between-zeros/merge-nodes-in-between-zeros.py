@@ -16,7 +16,7 @@ class Solution:
                 else:
                     res[-1] = res[-1] + tmp.val
             tmp = tmp.next
-        print(res)  
+        # print(res)  
         result = ListNode(0)
         dummy = result
         for i in res:

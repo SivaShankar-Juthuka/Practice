@@ -5,10 +5,10 @@ class Solution:
         for i in nums:
             if i in dic:
                 dic[i] += 1
+                if dic[i] == n:
+                    return i
             else:
                 dic[i] = 1
-            if dic[i] == n:
-                return i
         
         return -1
         
